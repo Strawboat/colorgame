@@ -1,0 +1,25 @@
+body{
+	background-color : #285481;
+}
+.alpha {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.alpha_div {
+	width:30%;
+	background-color:red;
+	float:left;
+	padding-bottom:30%;
+	margin:1.66%;  
+			  }
+
+.header {
+	color: white;
+	justify-content: center;
+	text-align: center;
+}
+.wrong{
+	justify-content: center;
+	text-align: center;
+	color: white;
+}
