@@ -9,7 +9,7 @@ var colors = [
 			 ]
 
 var div_color = document.querySelectorAll(".alpha_div");
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 
 colorDisplay = document.querySelector(".colorpicked")
 colorDisplay.innerHTML = pickedColor
@@ -20,10 +20,23 @@ for(var i = 0; i < div_color.length ; i++){
 		var pickcolor = this.style.backgroundColor;
 		//Print out if color is right
 		if(pickcolor == pickedColor){
-			document.querySelector(".wrong").innerHTML = "Right"
+			document.querySelector(".wrong").innerHTML = "Right";
+			changeColors(pickedColor);
 		}else{
 			this.style.backgroundColor = "#285481";
 			document.querySelector(".wrong").innerHTML = "Try Again"
 		}
 	});
 } 
+
+function changeColors(color) {
+	//loop through all squares
+	for(var i = 0; i < div_color.length; i++) {
+		//change each color to match given color
+		div_color[i].style.background = color;
+	}
+};
+function pickColor() {
+	var random = Math.floor(Math.random() * colors.length);
+	return colors[random];
+}
